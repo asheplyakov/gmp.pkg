@@ -238,7 +238,9 @@ check_vsnprintf (const char *want, const char *fmt, va_list ap)
 	      printf ("  want full |%s|\n", want);
 	      printf ("  ret       %d\n", ret);
 	      printf ("  want_len  %d\n", want_len);
+#ifndef _WIN32
 	      abort ();
+#endif
 	    }
 	}
     }
